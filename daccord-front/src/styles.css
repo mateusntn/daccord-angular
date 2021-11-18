@@ -4,3 +4,15 @@ html {
 }
 html, body { height: 100%; background-color: #F6F6F6;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container { padding: 70px;}
+
+.title {
+    font-weight: bold !important;
+    font-size: 25px !important;
+}
+
+.btn-create {
+    background-color: var(--green);
+    border: none;
+}
