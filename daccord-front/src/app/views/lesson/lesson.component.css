@@ -27,3 +27,19 @@
 .table {
     margin-top: 50px;
 }
+
+.align-middle {
+    vertical-align: middle;
+}
+
+.center {
+    text-align: center;
+}
+
+.mr {
+    margin-right: 5px;  
+}
+
+.ml {
+    margin-left: 5px;
+}
