@@ -3,7 +3,7 @@ html {
     --green: #1C9997;
 }
 html, body { height: 100%; background-color: #F6F6F6;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Poppins', sans-serif !important; }
 
 .container { padding: 70px;}
 
@@ -15,4 +15,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .btn-create {
     background-color: var(--green);
     border: none;
+}
+
+.red {
+    color: #E83F5B;
 }
