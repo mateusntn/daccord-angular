@@ -23,8 +23,14 @@ body {
 
 .btn-create {
   background-color: var(--green);
+  color: white;
   border: none;
 }
+
+.btn-create:hover {
+    background-color: #197c7b;
+    color: white;
+  }
 
 .red {
   color: #e83f5b;
@@ -50,4 +56,20 @@ body {
 
 .ml {
   margin-left: 5px;
+}
+
+.mb {
+    margin-bottom: 10px;
+}
+
+.mb-5 {
+    margin-bottom: 50px;
+}
+
+.select-form {
+    width: 100%;
+}
+
+.m0 {
+    margin: 0;
 }
