@@ -1,124 +1,110 @@
 <div class="container">
-    <div class="top-bar mb-5">
-        <h1 class="title">Criar lição</h1>
-        <div>
-            <button type="button" class="btn btn-danger mr" routerLink="/lesson">Cancelar</button>
-            <button type="button" class="btn btn-create ml" routerLink="/lesson">Salvar</button>
-        </div>
+  <div class="top-bar mb-5">
+    <h1 class="title">Criar lição</h1>
+    <div>
+      <button type="button" class="btn btn-danger mr" routerLink="/lesson">Cancelar</button>
+      <button type="button" class="btn btn-create ml" routerLink="/lesson">Salvar</button>
     </div>
-    <form>
-        <div class="card mb-5">
-            <div class="card-header" style="background-color: #1c9997; color: white;">
-                <h3 class="m0">Detalhes da lição</h3>
-            </div>
-            <div class="card-body">
-                <div class="form-group mb">
-                  <label for="formGroupExampleInput">Título:</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput">
-                </div>
-                <div class="form-group mb">
-                  <label for="formGroupExampleInput">Descrição:</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput">
-                </div>
-                <div class="form-group mb">
-                  <label for="formGroupExampleInput">Instrumento:</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Selecione um instrumento:</option>
-                    <option value="1">Guitarra</option>
-                    <option value="2">Violão</option>
-                    <option value="3">Piano</option>
-                  </select>
-                </div>
-                <div class="row mb">
-                  <div class="col">
-                    <label for="formGroupExampleInput">Gênero:</label>
-                    <input type="text" class="form-control">
-                  </div>
-                  <div class="col">
-                    <label for="formGroupExampleInput">Autor:</label>
-                    <input type="text" class="form-control">
-                  </div>
-                </div> 
-                <div class="form-group mb">
-                  <label for="formGroupExampleInput">Nível:</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Selecione o nível:</option>
-                    <option value="1">Fácil</option>
-                    <option value="2">Médio</option>
-                    <option value="3">Difícil</option>
-                  </select>
-                </div>                 
-            </div>
-        </div>
-        <div class="card mb-5">
-            <div class="card-header" style="background-color: #1c9997; color: white;">
-                <h3 class="m0">Artigo</h3>
-            </div>
-            <div class="card-body">
-                <div class="format-group mb-3">
-                    <label for="formGroupExampleInput">Arquivos:</label>
-                    <input type="file" class="form-control" id="inputGroupFile02">
-                </div>
-                <!-- <div class="format-group mb-3">
-                    <label for="formGroupExampleInput">Exercício de Performance:</label>
-                    <input type="file" class="form-control" id="inputGroupFile02">
-                </div> -->
-                <div class="form-group mb">
-                    <label for="formGroupExampleInput">Legenda:</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput">
-                  </div>
-            </div>
-        </div>
-
-        <div class="card mb-5">
-          <div class="card-header" style="background-color: #1c9997; color: white;">
-              <h3 class="m0">Vídeo-Aula</h3>
-          </div>
-          <div class="card-body">
-            <div class="form-group mb">
-              <label for="formGroupExampleInput">Link:</label>
-              <input type="text" class="form-control" id="formGroupExampleInput">
-            </div>
-              <!-- <div class="format-group mb-3">
-                  <label for="formGroupExampleInput">Exercício de Performance:</label>
-                  <input type="file" class="form-control" id="inputGroupFile02">
-              </div> -->
-              <div class="form-group mb">
-                  <label for="formGroupExampleInput">Legenda:</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput">
-                </div>
-          </div>
+  </div>
+  <form>
+    <div class="card mb-5">
+      <div class="card-header" style="background-color: #1c9997; color: white;">
+        <h3 class="m0">Detalhes da lição</h3>
       </div>
-      <div class="card mb-5">
-        <div class="card-header" style="background-color: #1c9997; color: white;">
-            <h3 class="m0">Exercício de Performance</h3>
+      <div class="card-body">
+        <div class="form-group mb">
+          <label for="formGroupExampleInput">Título:</label>
+          <input type="text" class="form-control" id="formGroupExampleInput">
         </div>
-        <div class="card-body">
-            <div class="format-group mb-3">
-                <label for="formGroupExampleInput">Exercício de Performance:</label>
-                <input type="file" class="form-control" id="inputGroupFile02">
-            </div>
-            <div class="form-group mb">
-                <label for="formGroupExampleInput">Legenda:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
-              </div>
+        <div class="form-group mb">
+          <label for="formGroupExampleInput">Descrição:</label>
+          <input type="text" class="form-control" id="formGroupExampleInput">
         </div>
+        <div class="form-group mb">
+          <label for="formGroupExampleInput">Instrumento:</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Selecione um instrumento:</option>
+            <option value="1">Guitarra</option>
+            <option value="2">Violão</option>
+            <option value="3">Piano</option>
+          </select>
+        </div>
+        <div class="row mb">
+          <div class="col">
+            <label for="formGroupExampleInput">Gênero:</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="col">
+            <label for="formGroupExampleInput">Autor:</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group mb">
+          <label for="formGroupExampleInput">Nível:</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Selecione o nível:</option>
+            <option value="1">Fácil</option>
+            <option value="2">Médio</option>
+            <option value="3">Difícil</option>
+          </select>
+        </div>
+      </div>
     </div>
     <div class="card mb-5">
       <div class="card-header" style="background-color: #1c9997; color: white;">
-          <h3 class="m0">Quiz</h3>
+        <h3 class="m0">Artigo</h3>
       </div>
       <div class="card-body">
-          <div class="format-group mb-3">
-              <label for="formGroupExampleInput">Exercício de Performance:</label>
-              <input type="file" class="form-control" id="inputGroupFile02">
-          </div>
-          <div class="form-group mb">
-              <label for="formGroupExampleInput">Legenda:</label>
-              <input type="text" class="form-control" id="formGroupExampleInput">
-            </div>
+        <div class="format-group mb-3">
+          <label for="formGroupExampleInput">Arquivos:</label>
+          <input type="file" class="form-control" id="inputGroupFile02">
+        </div>
+        <div class="form-group mb">
+          <label for="formGroupExampleInput">Legenda:</label>
+          <input type="text" class="form-control" id="formGroupExampleInput">
+        </div>
       </div>
-  </div>
-        
-    </form>
+    </div>
+
+    <div class="card mb-5">
+      <div class="card-header" style="background-color: #1c9997; color: white;">
+        <h3 class="m0">Vídeo-Aula</h3>
+      </div>
+      <div class="card-body">
+        <div class="form-group mb">
+          <label for="formGroupExampleInput">Link:</label>
+          <input type="text" class="form-control" id="formGroupExampleInput">
+        </div>
+        <div class="form-group mb">
+          <label for="formGroupExampleInput">Legenda:</label>
+          <input type="text" class="form-control" id="formGroupExampleInput">
+        </div>
+      </div>
+    </div>
+    <div class="card mb-5">
+      <div class="card-header" style="background-color: #1c9997; color: white;">
+        <h3 class="m0">Exercício de Performance</h3>
+      </div>
+      <div class="card-body">
+        <div class="format-group mb-3">
+          <label for="formGroupExampleInput">Exercício de Performance:</label>
+          <input type="file" class="form-control" id="inputGroupFile02">
+        </div>
+        <div class="form-group mb">
+          <label for="formGroupExampleInput">Legenda:</label>
+          <input type="text" class="form-control" id="formGroupExampleInput">
+        </div>
+      </div>
+    </div>
+    <div class="card mb-5">
+      <div class="card-header" style="background-color: #1c9997; color: white;">
+        <h3 class="m0">Quiz</h3>
+      </div>
+      <div class="card-body">
+        <div class="form-group mb">
+          <button type="button" class="btn btn-create ml">Criar pergunta</button>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
