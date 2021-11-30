@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-lesson-create',
@@ -7,7 +8,7 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./lesson-create.component.css']
 })
 export class LessonCreateComponent implements OnInit {
-
+    editor = ClassicEditor;
     quantity: number = 1;
 
   constructor() { }
