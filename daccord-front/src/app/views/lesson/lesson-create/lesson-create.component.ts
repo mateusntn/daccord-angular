@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-lesson-create',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LessonCreateComponent implements OnInit {
 
+    quantity: number = 1;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  searchForm: FormGroup;
+
+  addField() {
+    this.quantity += 1;
+  }
+
+  counter(i: number) {
+    return new Array(i);
+  }
 }
