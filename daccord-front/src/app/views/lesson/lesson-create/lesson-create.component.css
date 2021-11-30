@@ -10,3 +10,7 @@
     display: flex;
     align-items: center;
 }
+
+label {
+    font-weight: bold;
+}
