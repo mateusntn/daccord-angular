@@ -27,33 +27,15 @@
           </tr>
         </thead>
         <tbody style="background-color: white;">
-          <tr class="center">
-            <td colspan="2">Lição 1</td>
-            <td>Violão</td>
-            <td>Fácil</td>
+          <tr class="center" *ngFor="let lesson of lessons">
+            <td colspan="2">{{ lesson.title }}</td>
+            <td>{{ lesson.instrument }}</td>
+            <td>{{ lesson.level }}</td>
             <td>
                 <span class="mr" class="material-icons">edit</span>
                 <span class="ml" class="material-icons red">delete_outline</span>
             </td>
-          </tr>
-          <tr class="center">
-            <td colspan="2">Lição 2</td>
-            <td>Guitarra</td>
-            <td>Médio</td>
-            <td>
-                <span class="mr" class="material-icons">edit</span>
-                <span class="ml" class="material-icons red">delete_outline</span>
-            </td>
-          </tr>
-          <tr class="center">
-            <td colspan="2">Lição 3</td>
-            <td>Piano</td>
-            <td>Difícil</td>
-            <td>
-                <span class="mr" class="material-icons">edit</span>
-                <span class="ml" class="material-icons red">delete_outline</span>
-            </td>
-          </tr>
+          </tr>          
         </tbody>
       </table>
 </div>
