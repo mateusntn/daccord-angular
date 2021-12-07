@@ -6,6 +6,8 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatTableModule } from "@angular/material/table";
 import { MatCardModule } from "@angular/material/card";
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -29,7 +31,9 @@ import { LessonCreateComponent } from "./views/lesson/lesson-create/lesson-creat
     MatMenuModule,
     MatTableModule,
     MatCardModule,
-    CKEditorModule
+    CKEditorModule,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
