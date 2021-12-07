@@ -9,6 +9,7 @@ Projeto desenvolvido para a empresa Daccord, durante o PI(Projeto integralizador
 - firebase(firestore)
 - Angular 11.2.12
 
+
 # Equipe :man_technologist: :woman_technologist:
 - <a href="https://github.com/AlandaAquino">Alanda Aquino</a></p>
 - <a href="https://github.com/ceciliaoliveira-s">Cecília Oliveira</a></p>
