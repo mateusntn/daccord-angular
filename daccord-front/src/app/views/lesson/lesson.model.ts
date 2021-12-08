@@ -1,3 +1,5 @@
+import { Question } from "src/app/models/question.model";
+
 export interface Lesson {
   id?: number;
   title: String;
@@ -12,4 +14,5 @@ export interface Lesson {
   videoLegend: String;
   performanceExercise: String;
   exerciseLegend: String;
+  questions: Question[];
 }
