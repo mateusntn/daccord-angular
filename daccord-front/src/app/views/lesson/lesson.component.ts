@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
 import { Router } from "@angular/router";
+import { LessonDeleteComponent } from "./lesson-delete/lesson-delete.component";
 import { Lesson } from "./lesson.model";
 import { LessonService } from "./lesson.service";
 
@@ -11,7 +13,7 @@ import { LessonService } from "./lesson.service";
 export class LessonComponent implements OnInit {
   lessons: Lesson[];
 
-  constructor(private service:LessonService) {}
+  constructor(private service:LessonService, public dialog: MatDialog, private router: Router,) {}
 
   ngOnInit(): void {
     this.findAll();
@@ -22,5 +24,16 @@ export class LessonComponent implements OnInit {
         this.lessons = response;
         console.log(response);
     });    
+  }
+
+  openDialog(id: number): void {
+    const dialogRef = this.dialog.open(LessonDeleteComponent, {
+      width: '250px',
+      data: id
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.findAll();
+    });
   }
 }

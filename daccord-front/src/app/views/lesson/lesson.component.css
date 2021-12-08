@@ -21,3 +21,7 @@
 .table {
   margin-top: 50px;
 }
+
+.material-icons {
+  cursor: pointer;
+}

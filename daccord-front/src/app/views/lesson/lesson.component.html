@@ -33,7 +33,7 @@
             <td>{{ lesson.level }}</td>
             <td>
                 <span class="mr" class="material-icons">edit</span>
-                <span class="ml" class="material-icons red">delete_outline</span>
+                <span class="ml" class="material-icons red" (click)="openDialog(lesson.id)">delete_outline</span>
             </td>
           </tr>          
         </tbody>
