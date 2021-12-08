@@ -20,22 +20,22 @@ export class LessonService {
   }
 
   findById(id: number): Observable<Lesson> {
-    const url = `${this.baseUrl}/lesson/${id}`
+    const url = `${this.baseUrl}/lessons/${id}`
     return this.http.get<Lesson>(url)
   }
 
   create(lesson: Lesson): Observable<Lesson>{
-    const url = `${this.baseUrl}/lesson`
+    const url = `${this.baseUrl}/lessons`
     return this.http.post<Lesson>(url, lesson);
   }
 
   delete(id: number): Observable<void>{
-    const url = `${this.baseUrl}/lesson/${id}`
+    const url = `${this.baseUrl}/lessons/${id}`
     return this.http.delete<void>(url);
   }
 
   update(lesson: Lesson):Observable<void> {
-    const url = `${this.baseUrl}/lesson/${lesson.id}`
+    const url = `${this.baseUrl}/lessons/${lesson.id}`
     return this.http.put<void>(url, lesson)
   }
 
