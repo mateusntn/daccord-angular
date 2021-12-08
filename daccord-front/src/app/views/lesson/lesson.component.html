@@ -16,10 +16,16 @@
           <tr class="center">
             <th colspan="2" class="align-middle" scope="col">Lição</th>
             <th scope="col">
-                <span style="margin-left:24px;">Instrumentos<i class="material-icons align-middle">expand_more</i></span>
+              <a class="filter" [matMenuTriggerFor]="menu">Instrumentos <i class="material-icons align-middle">expand_more</i></a>
+              <mat-menu #menu="matMenu">
+                  <button *ngFor="let instrument of instruments" style="font-family: 'Poppins', sans-serif !important;" mat-menu-item>{{ instrument }}</button>
+              </mat-menu>
             </th>
             <th scope="col">
-                <span style="margin-left:24px;">Nível<i class="material-icons align-middle">expand_more</i></span>
+              <a class="filter" [matMenuTriggerFor]="menu">Nível <i class="material-icons align-middle">expand_more</i></a>
+              <mat-menu #menu="matMenu">
+                  <button *ngFor="let level of levels" style="font-family: 'Poppins', sans-serif !important;" mat-menu-item>{{ level }}</button>
+              </mat-menu>
             </th>
             <th>
               Ações

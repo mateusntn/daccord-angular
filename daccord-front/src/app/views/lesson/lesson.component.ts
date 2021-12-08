@@ -13,6 +13,10 @@ import { LessonService } from "./lesson.service";
 export class LessonComponent implements OnInit {
   lessons: Lesson[];
 
+  instruments: String[] = ['Violão', 'Piano', 'Violino', 'Saxofone', 'Cavaquinho'];
+
+  levels: String[] = ['Fácil', 'Médio', 'Difícil'];
+
   constructor(private service:LessonService, public dialog: MatDialog, private router: Router,) {}
 
   ngOnInit(): void {

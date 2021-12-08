@@ -25,3 +25,9 @@
 .material-icons {
   cursor: pointer;
 }
+
+.filter {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
