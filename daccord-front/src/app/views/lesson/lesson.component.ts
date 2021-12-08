@@ -28,7 +28,7 @@ export class LessonComponent implements OnInit {
 
   openDialog(id: number): void {
     const dialogRef = this.dialog.open(LessonDeleteComponent, {
-      width: '250px',
+      width: '30%',
       data: id
     });
 
