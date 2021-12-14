@@ -42,7 +42,6 @@ export class LessonCreateComponent implements OnInit {
   }
   
   
-  
   instruments: String[] = ['Violão', 'Piano', 'Violino', 'Saxofone', 'Cavaquinho'];
   
   levels: String[] = ['Fácil', 'Médio', 'Difícil'];
