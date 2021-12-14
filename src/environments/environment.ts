@@ -4,7 +4,8 @@
 
 export const environment = {
     production: false,
-    baseUrl: 'https://localhost:5001/v1'
+    baseUrl: 'https://daccord-api.herokuapp.com/v1'
+
 };
 
 /*
