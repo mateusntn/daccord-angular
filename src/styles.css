@@ -73,3 +73,13 @@ body {
 .m0 {
     margin: 0;
 }
+
+snack-bar-container.mat-snack-bar-container {
+  color: var(--green) !important;
+  background-color: #fff !important;
+  border-color: #000 !important;
+}
+
+div.mat-simple-snackbar-action {
+  color: #000 !important;
+}
