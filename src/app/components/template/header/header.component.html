@@ -1,13 +1,9 @@
 <mat-toolbar class="header mat-elevation-z4">
-    <a>
+    <a routerLink="/">
         <img class="logo" src="assets/img/daccord-logo.png" alt="logo-daccord">
     </a>
     <nav>
         <a>Dashboard</a>
-        <a [matMenuTriggerFor]="menu">Lições</a>
-        <mat-menu #menu="matMenu">
-            <button style="font-family: 'Poppins', sans-serif !important;" mat-menu-item routerLink="/lesson">Listar</button>
-            <button style="font-family: 'Poppins', sans-serif !important;" mat-menu-item routerLink="/lesson/create">Cadastrar</button>
-        </mat-menu>
+        <a routerLink="/lesson">Lições</a>
     </nav>
 </mat-toolbar>
