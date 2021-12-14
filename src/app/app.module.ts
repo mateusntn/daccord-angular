@@ -19,6 +19,7 @@ import { HeaderComponent } from "./components/template/header/header.component";
 import { LessonComponent } from "./views/lesson/lesson.component";
 import { LessonCreateComponent } from "./views/lesson/lesson-create/lesson-create.component";
 import { LessonDeleteComponent } from './views/lesson/lesson-delete/lesson-delete.component';
+import { LessonEditComponent } from './views/lesson/lesson-edit/lesson-edit.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { LessonDeleteComponent } from './views/lesson/lesson-delete/lesson-delet
     LessonComponent,
     LessonCreateComponent,
     LessonDeleteComponent,
+    LessonEditComponent,
   ],
   imports: [
     BrowserModule,
