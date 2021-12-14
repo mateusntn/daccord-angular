@@ -1,0 +1,16 @@
+.alternative {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.alternative-box {    
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+}

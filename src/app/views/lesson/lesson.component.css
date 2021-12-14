@@ -1,0 +1,33 @@
+.search-box {
+  width: 50%;
+  margin: 0;
+}
+
+.search {
+  margin: 0 !important;
+  border-color: #198754;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.search-btn {
+  background-color: #fff;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.search-btn span {
+  vertical-align: middle;
+}
+
+.table {
+  margin-top: 50px;
+}
+
+.material-icons {
+  cursor: pointer;
+}
+
+.filter {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}

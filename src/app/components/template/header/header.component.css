@@ -1,0 +1,19 @@
+.header {
+    background-color: var(--green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    font-family: 'Poppins', sans-serif !important;  
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 200px;
+}

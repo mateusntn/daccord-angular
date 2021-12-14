@@ -1,0 +1,47 @@
+<div class="container">    
+    <div class="top-bar">      
+        <h1 class="title">Catálogo</h1>  
+        <div class="container-fluid search-box">
+          <form class="d-flex">
+            <input class="form-control me-2 search" type="search" placeholder="Pesquisar..." aria-label="Search">
+            <button class="btn btn-outline-success search-btn" type="submit">
+              <span class="material-icons">search</span>
+            </button>
+          </form>
+        </div>
+        <button type="button" class="btn btn-create" routerLink="/lesson/create">Cadastrar</button>
+    </div>
+    <table class="table">
+        <thead style="background-color: #1C9997; color: white;">
+          <tr class="center">
+            <th colspan="2" class="align-middle" scope="col">Lição</th>
+            <th scope="col">
+              <a class="filter" [matMenuTriggerFor]="menuInstrument">Instrumentos <i class="material-icons align-middle">expand_more</i></a>
+              <mat-menu #menuInstrument="matMenu">
+                  <button *ngFor="let instrument of instruments" style="font-family: 'Poppins', sans-serif !important;" (click)="changeInstrument(instrument)" mat-menu-item>{{ instrument }}</button>
+              </mat-menu>
+            </th>
+            <th scope="col">
+              <a class="filter" [matMenuTriggerFor]="menuLevel">Nível <i class="material-icons align-middle">expand_more</i></a>
+              <mat-menu #menuLevel="matMenu">
+                  <button *ngFor="let level of levels" style="font-family: 'Poppins', sans-serif !important;" mat-menu-item (click)="changeLevel(level)">{{ level }}</button>
+              </mat-menu>
+            </th>
+            <th>
+              Ações
+            </th>
+          </tr>
+        </thead>
+        <tbody style="background-color: white;">
+          <tr class="center" *ngFor="let lesson of lessons">
+            <td colspan="2">{{ lesson.title }}</td>
+            <td>{{ lesson.instrument }}</td>
+            <td>{{ lesson.level }}</td>
+            <td>
+                <span class="mr" class="material-icons" routerLink="/lesson/edit/{{ lesson.id }}">edit</span>
+                <span class="ml" class="material-icons red" (click)="openDialog(lesson.id)">delete_outline</span>
+            </td>
+          </tr>          
+        </tbody>
+      </table>
+</div>
