@@ -19,6 +19,11 @@ export class LessonService {
     return this.http.get<Lesson[]>(url)
   }
 
+  findAllFilter(instrument: string, level: string):Observable<Lesson[]> {
+    const url = `${this.baseUrl}/lessons/filter?instrument=${instrument}&level=${level}`
+    return this.http.get<Lesson[]>(url)
+  }
+
   findById(id: number): Observable<Lesson> {
     const url = `${this.baseUrl}/lessons/${id}`
     return this.http.get<Lesson>(url)

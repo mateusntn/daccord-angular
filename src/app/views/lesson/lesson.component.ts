@@ -17,6 +17,9 @@ export class LessonComponent implements OnInit {
 
   levels: String[] = ['Fácil', 'Médio', 'Difícil'];
 
+  instrumentFilter: string = "";
+  levelFilter: string = "";
+
   constructor(private service:LessonService, public dialog: MatDialog, private router: Router,) {}
 
   ngOnInit(): void {
@@ -26,8 +29,13 @@ export class LessonComponent implements OnInit {
   findAll() {
     this.service.findAll().subscribe((response) => {
         this.lessons = response;
-        console.log(response);
     });    
+  }
+
+  findAllFilter() {
+    this.service.findAllFilter(this.instrumentFilter, this.levelFilter).subscribe((response) => {
+      this.lessons = response;
+    });
   }
 
   openDialog(id: number): void {
@@ -39,5 +47,15 @@ export class LessonComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       this.findAll();
     });
+  }
+
+  changeInstrument(instrument: string) {
+    this.instrumentFilter = instrument;
+    this.findAllFilter();
+  }
+  
+  changeLevel(level: string) {
+    this.levelFilter = level;
+    this.findAllFilter();
   }
 }
