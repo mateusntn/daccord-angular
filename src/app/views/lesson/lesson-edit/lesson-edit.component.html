@@ -23,7 +23,6 @@
                 <div class="form-group mb">
                     <label for="formGroupExampleInput">Instrumento:</label>
                     <select class="form-select" aria-label="Default select example">
-                        <option selected>Selecione um instrumento:</option>
                         <option (click)="changeInstrument(instrument)" *ngFor="let instrument of instruments">{{instrument}}</option>                 
                     </select>
                 </div>
@@ -40,7 +39,6 @@
                 <div class="form-group mb">
                     <label for="formGroupExampleInput">Nível:</label>
                     <select class="form-select" aria-label="Default select example">
-                        <option selected>Selecione o nível:</option>
                         <option (click)="changeLevel(level)" *ngFor="let level of levels">{{ level }}</option>
                     </select>
                 </div>
