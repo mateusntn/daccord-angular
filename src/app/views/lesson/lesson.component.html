@@ -18,13 +18,13 @@
             <th scope="col">
               <a class="filter" [matMenuTriggerFor]="menuInstrument">Instrumentos <i class="material-icons align-middle">expand_more</i></a>
               <mat-menu #menuInstrument="matMenu">
-                  <button *ngFor="let instrument of instruments" style="font-family: 'Poppins', sans-serif !important;" (click)="changeInstrument(instrument)" mat-menu-item>{{ instrument }}</button>
+                  <button *ngFor="let instrument of instruments" style="font-family: 'Poppins', sans-serif !important;" (click)="changeInstrumentFilter(instrument)" mat-menu-item>{{ instrument }}</button>
               </mat-menu>
             </th>
             <th scope="col">
               <a class="filter" [matMenuTriggerFor]="menuLevel">Nível <i class="material-icons align-middle">expand_more</i></a>
               <mat-menu #menuLevel="matMenu">
-                  <button *ngFor="let level of levels" style="font-family: 'Poppins', sans-serif !important;" mat-menu-item (click)="changeLevel(level)">{{ level }}</button>
+                  <button *ngFor="let level of levels" style="font-family: 'Poppins', sans-serif !important;" mat-menu-item (click)="changeLevelFilter(level)">{{ level }}</button>
               </mat-menu>
             </th>
             <th>

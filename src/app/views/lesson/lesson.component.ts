@@ -49,12 +49,12 @@ export class LessonComponent implements OnInit {
     });
   }
 
-  changeInstrument(instrument: string) {
+  changeInstrumentFilter(instrument: string) {
     this.instrumentFilter = instrument;
     this.findAllFilter();
   }
   
-  changeLevel(level: string) {
+  changeLevelFilter(level: string) {
     this.levelFilter = level;
     this.findAllFilter();
   }
