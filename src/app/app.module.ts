@@ -20,6 +20,10 @@ import { LessonComponent } from "./views/lesson/lesson.component";
 import { LessonCreateComponent } from "./views/lesson/lesson-create/lesson-create.component";
 import { LessonDeleteComponent } from './views/lesson/lesson-delete/lesson-delete.component';
 import { LessonEditComponent } from './views/lesson/lesson-edit/lesson-edit.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,7 @@ import { LessonEditComponent } from './views/lesson/lesson-edit/lesson-edit.comp
     LessonCreateComponent,
     LessonDeleteComponent,
     LessonEditComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,10 @@ import { LessonEditComponent } from './views/lesson/lesson-edit/lesson-edit.comp
     HttpClientModule,
     FormsModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule,
+    MatIconModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],
