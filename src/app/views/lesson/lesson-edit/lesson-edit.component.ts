@@ -12,6 +12,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 })
 export class LessonEditComponent implements OnInit {
   editor = ClassicEditor;
+  fileToUpload: File = null;
   quantity: number = 1;
 
   questions: Question[] = [
@@ -64,5 +65,15 @@ export class LessonEditComponent implements OnInit {
 
   counter(i: number) {
     return new Array(i);
+  }
+
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item[0];
+
+    const fileNames = [];
+    for(let i=0; i<files.length; i++) {
+      fileNames.push(files[i].name);
+    }
+    document.getElementById('customFileLabel').innerHTML = fileNames.join(', ')
   }
 }
