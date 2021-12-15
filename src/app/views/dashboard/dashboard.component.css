@@ -8,6 +8,9 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
+  background-color: #7bc6c3;
+  color: #183736;
+  border-radius: 10px;
 }
 
 .more-button {
@@ -17,5 +20,47 @@
 }
 
 .dashboard-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
+  padding: 50px;
+  font-size: 16px !important;  
+}
+
+.dashboard-card-content-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px !important;
+  margin-top: 50px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  font-size: 16px !important;
+}
+
+.circulo {
+  border-radius: 50%; 
+  background-color: #183736; 
+  width: 150px; 
+  height: 150px; 
+  line-height: 150px; 
+  color: #fff;
+}
+
+.circulo-level {
+  border-radius: 50%; 
+  background-color: #183736; 
+  width: 150px; 
+  height: 150px;
+  color: #fff;
+}
+
+mat-card-title {
+  font-size: 25px !important;
 }

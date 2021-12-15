@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { DashboardService } from './dashboard.service';
+import { Dashboard } from './dashboard.model';
+import { Lesson } from '../lesson/lesson.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -29,5 +32,29 @@ export class DashboardComponent {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  dashboard: Dashboard = {
+    lessonsQuantity: 0,
+    violaoQuantity: 0,
+    violinoQuantity: 0,
+    pianoQuantity: 0,
+    saxofoneQuantity: 0,
+    cavaquinhoQuantity: 0,
+    easyQuantity: 0,
+    mediumQuantity: 0,
+    hardQuantity: 0,
+    lastLessons: []
+  }
+
+  constructor(private breakpointObserver: BreakpointObserver, 
+            private service: DashboardService) {}
+
+  ngOnInit(): void {
+    this.getData();
+  }
+
+  getData() {
+    this.service.getData().subscribe((response) => {
+        this.dashboard = response;
+    });    
+  }
 }

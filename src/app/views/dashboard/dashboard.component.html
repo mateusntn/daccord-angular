@@ -1,22 +1,89 @@
 <div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
+  <h1 class="mat-h1" style="text-align: center; font-size: 30px; font-weight: bold;">Dashboards</h1>
   <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+
+    <mat-grid-tile>
       <mat-card class="dashboard-card">
-        <mat-card-header>
+        <mat-card-header style="justify-content: center;">
           <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
+            Total de Lições            
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content" style="justify-content: center;">
+          <div class="circulo" style="font-size: 80px;">{{ dashboard.lessonsQuantity }}</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header style="justify-content: center;">
+          <mat-card-title>
+            Últimas Lições           
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content-2">
+          <ul>
+            <li *ngFor="let l of dashboard.lastLessons">
+              {{ l }}
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header style="justify-content: center;">
+          <mat-card-title>
+            Lições por Instrumento            
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content" style="margin-top: 30px !important;">
+          <div class="item">
+            <p>Violão</p>
+            <p>{{ dashboard.violaoQuantity }}</p>
+          </div>
+          <div class="item">
+            <p>Violino</p>
+            <p>{{ dashboard.violinoQuantity }}</p>
+          </div>
+          <div class="item">
+            <p>Piano</p>
+            <p>{{ dashboard.pianoQuantity }}</p>
+          </div>
+          <div class="item">
+            <p>Saxofone</p>
+            <p>{{ dashboard.saxofoneQuantity }}</p>
+          </div>
+          <div class="item">
+            <p>Cavaquinho</p>
+            <p>{{ dashboard.cavaquinhoQuantity }}</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header style="justify-content: center;">
+          <mat-card-title>
+            Lições por Nível            
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>{{card.content}}</div>
+          <div class="item circulo-level">
+            <p>Fácil</p>
+            <p>{{ dashboard.easyQuantity }}</p>
+          </div>
+          <div class="item circulo-level">
+            <p>Médio</p>
+            <p>{{ dashboard.mediumQuantity }}</p>
+          </div>
+          <div class="item circulo-level">
+            <p>Difícil</p>
+            <p>{{ dashboard.hardQuantity }}</p>
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
