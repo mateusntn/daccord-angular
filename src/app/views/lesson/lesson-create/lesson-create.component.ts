@@ -25,6 +25,7 @@ export class LessonCreateComponent implements OnInit {
       correctAlternative: ""
     }
   ];
+
   lesson: Lesson = {
     title: "",
     description: "",
@@ -76,7 +77,14 @@ export class LessonCreateComponent implements OnInit {
     this.lesson.level = level;
   }
 
+
   handleFileInput(files: FileList) {
-    this.fileToUpload = files.item(0);
+    this.fileToUpload = files.item[0];
+
+    const fileNames = [];
+    for(let i=0; i<files.length; i++) {
+      fileNames.push(files[i].name);
+    }
+    document.getElementById('customFileLabel').innerHTML = fileNames.join(', ')
   }
 }
