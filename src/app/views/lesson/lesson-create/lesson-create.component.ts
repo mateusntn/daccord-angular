@@ -65,7 +65,7 @@ export class LessonCreateComponent implements OnInit {
   createLesson(): void {
     this.service.create(this.lesson).subscribe(() => {
       this.service.message('Lição criada com sucesso.');
-      this.router.navigate([`/lessons/`]);
+      this.router.navigate([`/lesson/`]);
     })
   }
   
