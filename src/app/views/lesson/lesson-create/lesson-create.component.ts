@@ -14,17 +14,17 @@ import { LessonService } from '../lesson.service';
 })
 export class LessonCreateComponent implements OnInit {
   editor = ClassicEditor;
-  fileToUpload: File = null;
-  quantity: number = 1;
+  // fileToUpload: File = null;
+  // quantity: number = 1;
 
   
-  questions: Question[] = [
-    {
-      questionText: "",
-      alternatives: [],
-      correctAlternative: ""
-    }
-  ];
+  // questions: Question[] = [
+  //   {
+  //     questionText: "",
+  //     alternatives: [],
+  //     correctAlternative: ""
+  //   }
+  // ];
 
   lesson: Lesson = {
     title: "",
@@ -39,7 +39,7 @@ export class LessonCreateComponent implements OnInit {
     videoLegend: "",
     performanceExercise: "",
     exerciseLegend: "",
-    questions: this.questions
+    questions: []
   }
   
   
@@ -54,13 +54,13 @@ export class LessonCreateComponent implements OnInit {
 
   searchForm: FormGroup;
   
-  addField() {
-    this.quantity += 1;
-  }
+  // addField() {
+  //   this.quantity += 1;
+  // }
   
-  counter(i: number) {
-    return new Array(i);
-  }
+  // counter(i: number) {
+  //   return new Array(i);
+  // }
 
   createLesson(): void {
     this.service.create(this.lesson).subscribe(() => {
@@ -68,23 +68,14 @@ export class LessonCreateComponent implements OnInit {
       this.router.navigate([`/lesson/`]);
     })
   }
-  
-  changeInstrument(instrument: String) {
-    this.lesson.instrument = instrument;
-  }
-  
-  changeLevel(level: String) {
-    this.lesson.level = level;
-  }
 
+  // handleFileInput(files: FileList) {
+  //   this.fileToUpload = files.item[0];
 
-  handleFileInput(files: FileList) {
-    this.fileToUpload = files.item[0];
-
-    const fileNames = [];
-    for(let i=0; i<files.length; i++) {
-      fileNames.push(files[i].name);
-    }
-    document.getElementById('customFileLabel').innerHTML = fileNames.join(', ')
-  }
+  //   const fileNames = [];
+  //   for(let i=0; i<files.length; i++) {
+  //     fileNames.push(files[i].name);
+  //   }
+  //   document.getElementById('customFileLabel').innerHTML = fileNames.join(', ')
+  // }
 }

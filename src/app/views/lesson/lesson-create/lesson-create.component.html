@@ -22,8 +22,8 @@
                 </div>
                 <div class="form-group mb">
                     <label for="formGroupExampleInput">Instrumento:</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Selecione um instrumento:</option>
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="lesson.instrument" name="instrument">
+                        <option selected>Selecione um instrumento</option>
                         <option (click)="changeInstrument(instrument)" *ngFor="let instrument of instruments">{{instrument}}</option>                 
                     </select>
                 </div>
@@ -39,9 +39,9 @@
                 </div>
                 <div class="form-group mb">
                     <label for="formGroupExampleInput">Nível:</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Selecione o nível:</option>
-                        <option (click)="changeLevel(level)" *ngFor="let level of levels">{{ level }}</option>
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="lesson.level" name="level">
+                        <option selected>Selecione o nível</option>
+                        <option *ngFor="let level of levels">{{ level }}</option>
                     </select>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                 </div> -->
                 <div class="form-group mb">
                     <label for="formGroupExampleInput">Insira aqui o texto:</label>
-                    <ckeditor name="myckeditor" debounce="300" [editor]="editor" [(ngModel)]="lesson.exerciseLegend" name="exerciseLegend"></ckeditor>
+                    <ckeditor name="myckeditor" debounce="300" [editor]="editor" [(ngModel)]="lesson.article" name="article"></ckeditor>
                 </div>
             </div>
         </div>

@@ -12,16 +12,16 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 })
 export class LessonEditComponent implements OnInit {
   editor = ClassicEditor;
-  fileToUpload: File = null;
-  quantity: number = 1;
+  // fileToUpload: File = null;
+  // quantity: number = 1;
 
-  questions: Question[] = [
-    {
-      questionText: "",
-      alternatives: [],
-      correctAlternative: ""
-    }
-  ];
+  // questions: Question[] = [
+  //   {
+  //     questionText: "",
+  //     alternatives: [],
+  //     correctAlternative: ""
+  //   }
+  // ];
 
   lesson: Lesson = {
     title: "",
@@ -36,7 +36,7 @@ export class LessonEditComponent implements OnInit {
     videoLegend: "",
     performanceExercise: "",
     exerciseLegend: "",
-    questions: this.questions
+    questions: []
   }
 
   instruments: String[] = ['Violão', 'Piano', 'Violino', 'Saxofone', 'Cavaquinho'];
@@ -63,17 +63,17 @@ export class LessonEditComponent implements OnInit {
     });
   }
 
-  counter(i: number) {
-    return new Array(i);
-  }
+  // counter(i: number) {
+  //   return new Array(i);
+  // }
 
-  handleFileInput(files: FileList) {
-    this.fileToUpload = files.item[0];
+  // handleFileInput(files: FileList) {
+  //   this.fileToUpload = files.item[0];
 
-    const fileNames = [];
-    for(let i=0; i<files.length; i++) {
-      fileNames.push(files[i].name);
-    }
-    document.getElementById('customFileLabel').innerHTML = fileNames.join(', ')
-  }
+  //   const fileNames = [];
+  //   for(let i=0; i<files.length; i++) {
+  //     fileNames.push(files[i].name);
+  //   }
+  //   document.getElementById('customFileLabel').innerHTML = fileNames.join(', ')
+  // }
 }
