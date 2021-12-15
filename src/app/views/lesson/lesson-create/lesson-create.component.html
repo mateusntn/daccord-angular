@@ -51,24 +51,24 @@
                 <h3 class="m0">Artigo</h3>
             </div>
             <div class="card-body">
-                <div class="format-group mb-3">
-                    <label for="formGroupExampleInput">Arquivos:</label>
+                <!-- <div class="format-group mb-3">
+                    <label for="formGroupExampleInput" id="customFileLabel">Arquivos:</label>
                     <input 
                         type="file" 
-                        class="form-control"
-                        [(ngModel)]="lesson.article" 
-                        name="article" 
+                        class="form-control" 
+                        [(ngModel)]="lesson.article"
+                        name="article"  
                         (change)="handleFileInput($event.target.files)"
-                        accept=".txt" 
+                        accept=".txt"
+                        multiple
                     >
-                </div>
+                </div> -->
                 <div class="form-group mb">
-                    <label for="formGroupExampleInput">Legenda:</label>
-                    <ckeditor name="myckeditor" debounce="300" [editor]="editor" [(ngModel)]="lesson.articleLegend" name="articleLegend"></ckeditor>
+                    <label for="formGroupExampleInput">Insira aqui o texto:</label>
+                    <ckeditor name="myckeditor" debounce="300" [editor]="editor" [(ngModel)]="lesson.exerciseLegend" name="exerciseLegend"></ckeditor>
                 </div>
             </div>
         </div>
-
         <div class="card mb-5">
             <div class="card-header" style="background-color: #1c9997; color: white;">
                 <h3 class="m0">Vídeo-Aula</h3>
@@ -89,8 +89,8 @@
                 <h3 class="m0">Exercício de Performance</h3>
             </div>
             <div class="card-body">
-                <div class="format-group mb-3">
-                    <label for="formGroupExampleInput">Exercício de Performance:</label>
+                <!-- <div class="format-group mb-3">
+                    <label for="formGroupExampleInput" id="customFileLabel">Exercício de Performance:</label>
                     <input 
                         type="file" 
                         class="form-control" 
@@ -98,15 +98,16 @@
                         name="performanceExercise" 
                         (change)="handleFileInput($event.target.files)"
                         accept=".txt"
+                        multiple
                     >
-                </div>
+                </div> -->
                 <div class="form-group mb">
-                    <label for="formGroupExampleInput">Legenda:</label>
+                    <label for="formGroupExampleInput">Insira aqui o texto:</label>
                     <ckeditor name="myckeditor" debounce="300" [editor]="editor" [(ngModel)]="lesson.exerciseLegend" name="exerciseLegend"></ckeditor>
                 </div>
             </div>
         </div>
-        <div class="card mb-5">
+        <!-- <div class="card mb-5">
             <div class="card-header" style="background-color: #1c9997; color: white;">
                 <h3 class="m0">Quiz</h3>
             </div>
@@ -138,7 +139,7 @@
                 </div>
                 <button (click)=addField() type="button" class="btn btn-create ml">Criar pergunta</button>
             </div>
-        </div>
+        </div> -->
     </form>
     <div>
       <button type="button" class="btn btn-danger mr" routerLink="/lesson">Voltar</button>
