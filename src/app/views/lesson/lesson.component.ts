@@ -13,9 +13,9 @@ import { LessonService } from "./lesson.service";
 export class LessonComponent implements OnInit {
   lessons: Lesson[];
 
-  instruments: String[] = ['Violão', 'Piano', 'Violino', 'Saxofone', 'Cavaquinho'];
+  instruments: String[] = ['Todos','Violão', 'Piano', 'Violino', 'Saxofone', 'Cavaquinho'];
 
-  levels: String[] = ['Fácil', 'Médio', 'Difícil'];
+  levels: String[] = ['Todos','Fácil', 'Médio', 'Difícil'];
 
   instrumentFilter: string = "";
   levelFilter: string = "";
@@ -33,6 +33,12 @@ export class LessonComponent implements OnInit {
   }
 
   findAllFilter() {
+    if (this.instrumentFilter.toLowerCase() == "todos") {
+      this.instrumentFilter = "";
+    }
+    if (this.levelFilter.toLowerCase() == "todos") {
+      this.levelFilter = "";
+    }
     this.service.findAllFilter(this.instrumentFilter, this.levelFilter).subscribe((response) => {
       this.lessons = response;
     });
