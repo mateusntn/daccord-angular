@@ -45,16 +45,23 @@ export class DashboardComponent {
     lastLessons: []
   }
 
+  breakpoint: number;
+
   constructor(private breakpointObserver: BreakpointObserver, 
             private service: DashboardService) {}
 
   ngOnInit(): void {
     this.getData();
+    this.breakpoint = (window.innerWidth <= 700) ? 1 : 2;
   }
 
   getData() {
     this.service.getData().subscribe((response) => {
         this.dashboard = response;
     });    
+  }
+
+  onResize(event) {
+    this.breakpoint = (event.target.innerWidth <= 700) ? 1 : 2;
   }
 }

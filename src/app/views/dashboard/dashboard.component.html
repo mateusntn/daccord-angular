@@ -1,6 +1,6 @@
 <div class="grid-container">
   <h1 class="mat-h1" style="text-align: center; font-size: 30px; font-weight: bold;">Dashboards</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
+  <mat-grid-list [cols]="breakpoint" rowHeight="350px" (window:resize)="onResize($event)">
 
     <mat-grid-tile>
       <mat-card class="dashboard-card">
@@ -39,24 +39,24 @@
             Lições por Instrumento            
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content" style="margin-top: 30px !important;">
-          <div class="item">
+        <mat-card-content class="dashboard-card-content grid-teste" style="margin-top: 30px !important;">
+          <div class="item a">
             <p>Violão</p>
             <p>{{ dashboard.violaoQuantity }}</p>
           </div>
-          <div class="item">
+          <div class="item b">
             <p>Violino</p>
             <p>{{ dashboard.violinoQuantity }}</p>
           </div>
-          <div class="item">
+          <div class="item c">
             <p>Piano</p>
             <p>{{ dashboard.pianoQuantity }}</p>
           </div>
-          <div class="item">
+          <div class="item d">
             <p>Saxofone</p>
             <p>{{ dashboard.saxofoneQuantity }}</p>
           </div>
-          <div class="item">
+          <div class="item e">
             <p>Cavaquinho</p>
             <p>{{ dashboard.cavaquinhoQuantity }}</p>
           </div>
@@ -71,16 +71,16 @@
             Lições por Nível            
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div class="item circulo-level">
+        <mat-card-content class="dashboard-card-content  grid-level">
+          <div class="item circulo-level a">
             <p>Fácil</p>
             <p>{{ dashboard.easyQuantity }}</p>
           </div>
-          <div class="item circulo-level">
+          <div class="item circulo-level b">
             <p>Médio</p>
             <p>{{ dashboard.mediumQuantity }}</p>
           </div>
-          <div class="item circulo-level">
+          <div class="item circulo-level c">
             <p>Difícil</p>
             <p>{{ dashboard.hardQuantity }}</p>
           </div>

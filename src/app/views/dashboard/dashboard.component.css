@@ -64,3 +64,58 @@
 mat-card-title {
   font-size: 25px !important;
 }
+
+@media (max-width: 1200px) {
+  .circulo-level {
+    width: 100px;
+    height: 100px;
+  }
+
+  .dashboard-card-content {
+    padding: 50px 15px;
+  }
+}
+
+@media (max-width: 850px) {
+  .dashboard-card-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-card-content {
+    padding: 20px 15px;
+  }
+
+  .a {
+    grid-area: a;
+  }
+
+  .b {
+    grid-area: b;
+  }
+
+  .c{
+    grid-area: c;
+    margin: 0 auto;
+  }
+
+  .d{
+    grid-area: d;    
+  }
+
+  .e{
+    grid-area: e;
+  }
+
+  .grid-teste {
+    display: grid !important;
+    grid-template-areas: "a b c"
+                          "d e f";
+  }
+
+  .grid-level {
+    display: grid !important;
+    grid-template-areas: "a b"
+                         "c c";
+  }
+}

@@ -83,3 +83,9 @@ snack-bar-container.mat-snack-bar-container {
 div.mat-simple-snackbar-action {
   color: #000 !important;
 }
+
+@media (max-width: 550px) {
+  .container {
+    padding: 70px 3px;
+  }
+}
