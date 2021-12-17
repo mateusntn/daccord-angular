@@ -1,0 +1,23 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "daccord-angular.herokuapp",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "daccord-angular.herokuapp",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/28x30.png",
+      "type": "image/png",
+      "sizes": "28x30"
+    },
+    {
+      "src": "images/28x30.png",
+      "type": "image/png",
+      "sizes": "28x30"
+    }
+  ]
+}
